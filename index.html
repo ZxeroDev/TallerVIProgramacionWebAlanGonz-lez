@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Autor" content="Alan GOnzález M.">
+    <title>Dragon Ball Wiki AGM</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/utilidades.js"></script>
+    <script src="js/consumeapi.js"></script>
+  </head>
+  <body>
+    <h1>Guerreros Z</h1>
+
+    <div class="filterContainer">
+      <input
+        type="text"
+        id="inputBuscador"
+        placeholder="Buscar por nombre..."
+        oninput="filtrarPersonajes()"
+      />
+
+      <select id="selectRaza" onchange="filtrarPersonajes()">
+        <option value="todos">Todas las razas</option>
+        <option value="Saiyan">Saiyan</option>
+        <option value="Namekian">Namekian</option>
+        <option value="Human">Humano</option>
+        <option value="Frieza Race">Raza de Freezer</option>
+        <option value="Android">Androide</option>
+        <option value="Majin">Majin</option>
+        <option value="God">Dios</option>
+        <option value="Angel">Ángel</option>
+      </select>
+
+      <select id="selectPlaneta" onchange="filtrarPersonajes()">
+        <option value="todos">Todos los planetas</option>
+      </select>
+    </div>
+
+    <div class="gridContainer" id="divPadre"></div>
+  </body>
+</html>
